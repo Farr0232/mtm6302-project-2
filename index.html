@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>APOD Image Search</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- CSS Style links -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <main>
+        <div class="container-fluid">
+            <div class="row content">
+                <div class="col-sm-3 sidebar">
+                    <h5>Nasa image searcher</h5>
+
+                    <div class="input-group">
+                        <span>
+                            <label for="datepicker">Pick a Date: </label>
+                            <input type="text" id="datepicker" name="datepicker">
+
+                        </span>
+                        <button type="button" class="btn btn-info" id="search">Search</button>
+                    </div>
+                    <button type="button" class="btn btn-info" id="liked_content">Liked Content</button>
+
+                    <div id="search_error"></div>
+                </div>
+
+                <div id="glass" class=col-9>
+
+                    <div id="current_search" class="col-sm-9">
+                        <h5><small><b>Current Search <span id="close_search" class="float-right"> Dismiss Current
+                                        search</span></b></small></h5>
+                        <h5>
+                            <hr>
+                            <h4 id="current_search_title">Title</h4>
+
+                            <h7 id="current_search_text">Description...</h7>
+
+
+
+
+                    </div>
+                    <div id="liked_content_div" class="col-sm-9">
+                        <h5><small><b>LIKED CONTENT</b></small></h5>
+                        <hr>
+                        <div id="favs">
+                        </div>
+                    </div>
+                    <div id="recent_searches_div" class="col-sm-9">
+                        <h5><small><b>RECENT SEARCHES</b></small></h5>
+                        <hr>
+                        <div id="recent_searches">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!-- /* custom js styles */ -->
+    <script src="./script.js"></script>
+</body>
+
+</html>

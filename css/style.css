@@ -1,0 +1,24 @@
+.row.content {height: 1500px}
+    
+.sidebar {
+  background-color: #f1f1f1;
+  
+}
+
+
+footer {
+  background-color: #555;
+  color: white;
+  padding: 15px;
+}
+
+/* -----------------------------------
+            Mobile Styles             
+--------------------------------------*/
+@media screen and (max-width: 767px) {
+  .sidebar {
+    height: auto;
+    padding: 15px;
+  }
+  .row.content {height: auto;} 
+}
