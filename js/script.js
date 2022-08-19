@@ -46,7 +46,7 @@ $(document).ready(function () {
                 favs = favs + ` <h4>` + dataset["title"] + `</h4>
                             <h6><i class="fa-solid fa-calendar-days"></i> <span>`+ dataset['date'] + ` </span> <span class="float-right"> <div class="like" data-id="` + index + `"> <i class="fa-solid fa-heart-circle-minus"></i> </div> </span></b></h6>
                             <h7>`+ dataset["explanation"] + `</h7>
-                            <div class="text-center">
+                            <div class="imgNasa text-center">
                             <a id="hdurl" href="">
                             `;
 
@@ -73,7 +73,7 @@ $(document).ready(function () {
 
             html = html + `  </span></b></h6>
                         <h7>`+ dataset["explanation"] + `</h7>
-                        <div class="imgNasa">
+                        <div class="imgNasa text-center">
                         <a id="hdurl" href="">
                         `;
 

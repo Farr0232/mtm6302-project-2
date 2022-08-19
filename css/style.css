@@ -1,16 +1,188 @@
-.row.content {height: 1500px}
+.row.content {height: auto}
     
 .sidebar {
-  background-color: #f1f1f1;
+  z-index: 2;
+}
+
+.sidebar h1 {
+    margin-top: 50px !important;
+    margin-bottom: 25px !important;
+    background: white;
+    background: linear-gradient(to right bottom,
+     rgba(255, 255, 255, 0.7), 
+     rgba(255, 255, 255,0.3)
+     );
+    border-radius: 2rem;
+    z-index: 1;
+    backdrop-filter: blur(2rem);
+    padding: 20px;
+}
+.hasDatepicker{
+    width:100%;
+}
+
+.input-group {
+    background: white;
+    background: linear-gradient(to right bottom,
+     rgba(255, 255, 255, 0.7), 
+     rgba(255, 255, 255,0.3)
+     );
+    border-radius: 2rem;
+    z-index: 1;
+    backdrop-filter: blur(2rem);
+    padding: 20px;
+}
+
+.input-group label {
+    font-size: 1.5rem;
+}
+.background {
+    min-height: 100vh;
+    font-family: azo-sans-web, sans-serif;;
+    background: rgb(131,58,180);
+    background: linear-gradient(0deg, rgb(0, 255, 251) 0%, rgb(0, 38, 255) 50%, rgb(252, 69, 182) 100%);
+  }
+  #glass {
+    background: white;
+    background: linear-gradient(to right bottom,
+     rgba(255, 255, 255, 0.7), 
+     rgba(255, 255, 255,0.3)
+     );
+    border-radius: 2rem;
+    z-index: 1;
+    backdrop-filter: blur(2rem);
+    padding-bottom: 35px;
+  }
+  #current_search {
+    background: white;
+    background: linear-gradient(to right bottom,
+     rgba(255, 255, 255, 0.7), 
+     rgba(255, 255, 255,0.3)
+     );
+    border-radius: 2rem;
+    z-index: 1;
+    backdrop-filter: blur(2rem);
+    padding-top: 35px;
+    padding-bottom: 25px;
+    margin-top: 25px;
+  }
+  #current_search_text {
+    font-family: work-sans,sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  #current_search h5 {
+    font-size: 2rem;
+  }
   
+  #recent_searches_div {
+      background: white;
+      background: linear-gradient(to right bottom,
+      rgba(255, 255, 255, 0.7), 
+      rgba(255, 255, 255,0.3)
+      );
+      border-radius: 2rem;
+      z-index: 1;
+      backdrop-filter: blur(2rem);
+      padding-top: 35px;
+      padding-bottom: 25px;
+      margin-top: 25px;
+    }
+    #recent_searches_div h7 {
+        font-family: work-sans,sans-serif;
+        font-weight: 400;
+        font-style: normal;
+    }
+    #recent_searches_div h5 {
+        font-size: 2rem;
+        background: white;
+        background: linear-gradient(to right bottom,
+        rgba(255, 255, 255, 0.7), 
+        rgba(255, 255, 255,0.3)
+        );
+        border-radius: 2rem;
+        z-index: 1;
+        backdrop-filter: blur(2rem);
+        padding: 15px;
+      }
+    
+    #liked_content_div {
+    background: white;
+    background: linear-gradient(to right bottom,
+    rgba(255, 255, 255, 0.7), 
+    rgba(255, 255, 255,0.3)
+    );
+    border-radius: 2rem;
+    z-index: 1;
+    backdrop-filter: blur(2rem);
+    padding-top: 35px;
+    padding-bottom: 25px;
+    margin-top: 25px;
+}
+#liked_content_div h7 {
+    font-family: work-sans,sans-serif;
+    font-weight: 400;
+    font-style: normal;
 }
 
+#liked_content_div h5 {
+    font-size: 2rem;
+    background: white;
+    background: linear-gradient(to right bottom,
+    rgba(255, 255, 255, 0.7), 
+    rgba(255, 255, 255,0.3)
+    );
+    border-radius: 2rem;
+    z-index: 1;
+    backdrop-filter: blur(2rem);
+    padding:15px;
+  }
 
-footer {
-  background-color: #555;
-  color: white;
-  padding: 15px;
+.imgNasa {
+    margin-bottom: 25px;
 }
+
+/*=================
+        Buttons
+==================== */
+  #close_search {
+    color: #f1f1f1;
+    cursor: pointer;
+    border: rgb(255, 79, 234) 5px solid;
+    border-radius: .5rem;
+    background: rgb(131,58,180);
+    padding: 5px;
+  }
+
+  #search{
+    color: #f1f1f1;
+    cursor: pointer;
+    border: rgb(255, 79, 234) 2px solid;
+    border-radius: .5rem;
+    background: rgb(131,58,180);
+    padding: 5px;
+
+  }
+
+  #liked_content {
+    color: #f1f1f1;
+    cursor: pointer;
+    border: rgb(255, 79, 234) 2px solid;
+    border-radius: .5rem;
+    background: rgb(131,58,180);
+    padding: 5px;
+  }
+
+  /* used for setting color of pink heart */
+  .pink {color:rgb(224, 24, 134);}
+
+  #current_like {
+    cursor: pointer;
+  }
+
+  .like {
+    cursor: pointer;
+  }
 
 /* -----------------------------------
             Mobile Styles             

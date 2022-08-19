@@ -17,86 +17,90 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
         integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Adobe Font links -->
+    <link rel="stylesheet" href="https://use.typekit.net/mft0mzc.css">
+    <link rel="stylesheet" href="https://use.typekit.net/mft0mzc.css">
     <link rel="stylesheet" href="css/style.css" />
 </head>
 
 <body>
+    <main class="background">
+        <div class="container-fluid">
+            <div class="row content">
+                <div class="col-sm-3 sidebar">
+                    <h1>APOD Image Search</h1>
 
-    <div class="container-fluid">
-        <div class="row content">
-            <div class="col-sm-3 sidebar">
-                <h5>Nasa image searcher</h5>
+                    <div class="input-group">
+                        <span>
+                            <label for="datepicker">Pick a Date: </label>
+                            <input type="text" id="datepicker" name="datepicker">
 
-                <div class="input-group">
-                    <span>
-                        <label for="datepicker">Pick a Date: </label>
-                        <input type="text" id="datepicker" name="datepicker">
+                        </span>
+                        <button type="button" class="btn btn-info" id="search">Search</button>
+                        <button type="button" class="btn btn-info" id="liked_content">Liked Content</button>
+                    </div>
 
-                    </span>
-                    <button type="button" class="btn btn-info" id="search">Search</button>
+                    <div id="search_error"></div>
                 </div>
-                <button type="button" class="btn btn-info" id="liked_content">Liked Content</button>
 
-                <div id="search_error"></div>
-            </div>
+                <div id="glass" class="col-sm-9">
 
-            <div id="glass" class=col-9>
+                    <div id="current_search" class="col-sm-12">
+                        <h5><small><b>Current Search <span id="close_search" class="float-right"> Dismiss Current
+                                        Search</span></b></small></h5>
+                        <h5>
+                            <hr>
+                            <h4 id="current_search_title">Title</h4>
+                            <h6><i class="fa-solid fa-calendar-days"></i> <span id="current_search_date"> </span> <span
+                                    class="float-right">
 
-                <div id="current_search" class="col-sm-9">
-                    <h5><small><b>Current Search <span id="close_search" class="float-right"> Dismiss Current
-                                    search</span></b></small></h5>
-                    <h5>
+                                    <div id="current_like" class="like" data-id=""> <i id="update_like_class"
+                                            class="fa-solid fa-heart-circle-plus pink"></i> </div>
+                                </span></b></h6>
+                            <h7 id="current_search_text">Description...</h7>
+                            <div class="imgNasa text-center">
+                                <a id="hdurl" href=""> <img id="current_search_image" src="" class="img-fluid">
+                                    <div id="current_search_video" class="embed-responsive embed-responsive-16by9">
+                                        <iframe id="current_search_video_link" class="embed-responsive-item" src=""
+                                            allowfullscreen></iframe>
+                                    </div>
+                                </a>
+                            </div>
+
+
+
+
+                    </div>
+                    <div id="liked_content_div" class="col-sm-12">
+                        <h5><small><b>LIKED CONTENT</b></small></h5>
                         <hr>
-                        <h4 id="current_search_title">Title</h4>
-                        <h6><i class="fa-solid fa-calendar-days"></i> <span id="current_search_date"> </span> <span
-                                class="float-right">
-
-                                <div id="current_like" class="like" data-id=""> <i id="update_like_class"
-                                        class="fa-solid fa-heart-circle-plus pink"></i> </div>
-                            </span></b></h6>
-                        <h7 id="current_search_text">Description...</h7>
-                        <div class="text-center">
-                            <a id="hdurl" href=""> <img id="current_search_image" src="" class="img-fluid">
-                                <div id="current_search_video" class="embed-responsive embed-responsive-16by9">
-                                    <iframe id="current_search_video_link" class="embed-responsive-item" src=""
-                                        allowfullscreen></iframe>
-                                </div>
-                            </a>
+                        <div id="favs">
                         </div>
-
-
-
-
-                </div>
-                <div id="liked_content_div" class="col-sm-9">
-                    <h5><small><b>LIKED CONTENT</b></small></h5>
-                    <hr>
-                    <div id="favs">
+                    </div>
+                    <div id="recent_searches_div" class="col-sm-12">
+                        <h5><small><b>RECENT SEARCHES</b></small></h5>
+                        <hr>
+                        <div id="recent_searches">
+                        </div>
                     </div>
                 </div>
-                <div id="recent_searches_div" class="col-sm-9">
-                    <h5><small><b>RECENT SEARCHES</b></small></h5>
-                    <hr>
-                    <div id="recent_searches">
-                    </div>
-                </div>
+
             </div>
-
         </div>
-    </div>
-    <!-- /* Javascript Libraries */ -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
-        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
-    </script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
-        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
-    </script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js"
-        integrity="sha512-57oZ/vW8ANMjR/KQ6Be9v/+/h6bq9/l3f0Oc7vn6qMqyhvPd1cvKBRWWpzu0QoneImqr2SkmO4MSqU+RpHom3Q=="
-        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <!-- /* custom js styles */ -->
-    <script src="js/script.js"></script>
+        <!-- /* Javascript Libraries */ -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+            integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
+        </script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+            integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
+        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js"
+            integrity="sha512-57oZ/vW8ANMjR/KQ6Be9v/+/h6bq9/l3f0Oc7vn6qMqyhvPd1cvKBRWWpzu0QoneImqr2SkmO4MSqU+RpHom3Q=="
+            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <!-- /* custom js styles */ -->
+        <script src="js/script.js"></script>
+    </main>
 </body>
 
 </html>
